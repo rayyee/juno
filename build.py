@@ -30,6 +30,7 @@ if platform.system() == "Darwin":
   LINK += [ "luajit-5.1" ]
   FLAGS += [ "-pagezero_size 10000", "-image_base 100000000" ]
   FLAGS += [ os.popen("sdl-config --cflags").read().strip() ]
+  FLAGS += [ "-I/usr/local/include" ]
   EXTRA += os.popen("sdl-config --libs").read().strip()
   DEFINE += [ "SR_MODE_ARGB" ]
 
